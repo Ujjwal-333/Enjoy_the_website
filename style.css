@@ -1,0 +1,50 @@
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Josefin Sans',sans-serif;color:#222;background:#fff;line-height:1.6}
+img{max-width:100%;display:block}
+.navbar{position:sticky;top:0;z-index:1000;min-height:64px;background:#212529;color:#fff;display:flex;align-items:center;padding:0 5%;gap:25px}
+.brand{color:#fff;text-decoration:none;font-size:22px;font-weight:700;white-space:nowrap}
+.nav-links{display:flex;gap:8px;margin-left:auto}
+.nav-links a{color:#ddd;text-decoration:none;padding:20px 13px}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.search-form{display:flex;gap:7px}
+.search-form input{padding:9px 11px;border:0;border-radius:4px;outline:none}
+.search-form button{padding:9px 13px;border:1px solid #28a745;color:#28a745;background:transparent;border-radius:4px;cursor:pointer}
+.menu-btn{display:none;background:none;color:#fff;border:0;font-size:27px;margin-left:auto}
+.hero{position:relative;height:min(90vh,650px);overflow:hidden;background:#111}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s ease}
+.hero-slide.active{opacity:1}
+.hero-slide img{width:100%;height:100%;object-fit:cover}
+.hero-caption{position:absolute;left:0;right:0;bottom:12%;text-align:center;color:#fff;text-shadow:0 2px 8px #000}
+.hero-caption h3{font-size:34px}
+.hero-caption p{font-size:18px}
+.slider-btn{position:absolute;top:50%;transform:translateY(-50%);border:0;background:rgba(0,0,0,.35);color:#fff;font-size:50px;width:55px;height:75px;cursor:pointer}
+.prev{left:15px}.next{right:15px}
+.dots{position:absolute;bottom:20px;left:0;right:0;text-align:center}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#ddd;margin:5px;cursor:pointer}
+.dot.active{background:#28a745}
+.section{padding:70px 5%}
+.section h2{text-align:center;font-size:32px;margin-bottom:45px}
+.section-note{text-align:center;margin-top:-25px;margin-bottom:30px;color:#666}
+.about-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about-img{width:100%;height:300px;object-fit:cover}
+.about-grid h3{font-size:38px;margin-bottom:18px}
+.about-grid p{padding:0 0 25px;color:#555}
+.btn{display:inline-block;border:0;padding:11px 20px;border-radius:4px;color:#fff;text-decoration:none;cursor:pointer;font-family:inherit}
+.success{background:#28a745}.primary{background:#007bff}
+.cards{max-width:1150px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+.card{border:1px solid #ddd;border-radius:7px;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,.08);background:#fff}
+.card img{width:100%;height:210px;object-fit:cover}
+.card-body{padding:20px}.card-body h4{font-size:22px;margin-bottom:8px}.card-body p{color:#666;margin-bottom:15px}
+.loading{text-align:center;grid-column:1/-1}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;max-width:1150px;margin:auto}
+.gallery img{width:100%;height:230px;object-fit:cover;border-radius:4px}
+.contact-section{background:#fafafa}
+.contact-form{max-width:600px;margin:auto}
+.contact-form label{display:block;margin-bottom:18px;font-weight:600}
+.contact-form input,.contact-form textarea{display:block;width:100%;margin-top:7px;padding:12px;border:1px solid #ccc;border-radius:4px;font:inherit}
+.form-message{margin-top:15px;font-weight:600}
+.saved-box{max-width:600px;margin:30px auto 0;padding:15px;background:#fff;border:1px solid #ddd;border-radius:5px;color:#555}
+footer{background:#212529;text-align:center;color:#fff;padding:18px}
+@media(max-width:900px){.navbar{flex-wrap:wrap;padding:10px 5%}.menu-btn{display:block}.nav-links{display:none;width:100%;order:4;flex-direction:column}.nav-links.open{display:flex}.nav-links a{padding:10px}.search-form{width:100%;order:5}.search-form input{flex:1}.about-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.hero{height:55vh}.hero-caption h3{font-size:25px}.hero-caption p{font-size:15px}.section{padding:50px 6%}.section h2{font-size:27px}.about-grid h3{font-size:30px}.cards,.gallery{grid-template-columns:1fr}.gallery img{height:250px}}
